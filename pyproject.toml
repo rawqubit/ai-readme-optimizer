@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-readme-optimizer"
+version = "1.0.0"
+description = "AI-powered README optimizer for clarity and completeness."
+license = {text = "MIT"}
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.scripts]
+ai-readme-optimizer = "ai_readme_optimizer.main:cli"
+
+[tool.setuptools.packages.find]
+include = ["ai_readme_optimizer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
